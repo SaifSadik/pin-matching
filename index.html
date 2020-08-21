@@ -67,22 +67,24 @@
             var newInput = inputNumber.concat(number);
             document.getElementById("inputNumber").value = newInput;
         }
+        
         document.getElementById("submit-button").addEventListener("click", function(){
             const input = document.getElementById("inputNumber").value;
             const generatedNumber = document.getElementById("generate-input").value;
 
             if(input == generatedNumber){
                 // debugger;
-                
                 const notifyMatched = document.getElementById("notify-matched");
+                const notifyNotMatched = document.getElementById("notify-Not-Matched");
                 notifyMatched.style.display = "block";
-
-                
+                notifyNotMatched.style.display = "none";
             }
 
             else{
+                const notifyMatched = document.getElementById("notify-matched");
                 const notifyNotMatched = document.getElementById("notify-Not-Matched");
                 notifyNotMatched.style.display = "block";
+                notifyMatched.style.display = "none";
             }
         })
     </script>
